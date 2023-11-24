@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "E3wZ/sO7gOfTNzvRAwaCo2d0xMAS4MqlsTw0N1VqZc0=",
+  "Hash": "6dPvkQUYB3QTigcUv4z2e2qCxmqt+qXLpESZkB6UIZM=",
   "Source": "vending-machine",
   "BasePath": "_content/vending-machine",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\www\\vending-machine\\Razor\\wwwroot\\js\\vendingMachine.js",
+      "SourceId": "vending-machine",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\www\\vending-machine\\Razor\\wwwroot\\",
+      "BasePath": "_content/vending-machine",
+      "RelativePath": "js/vendingMachine.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\vendingMachine.js"
     },
     {
       "Identity": "C:\\www\\vending-machine\\Razor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",

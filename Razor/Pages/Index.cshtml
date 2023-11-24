@@ -4,6 +4,8 @@
     ViewData["Title"] = "Vending Machine";
 }
 
+<script type="text/javascript" src="~/js/vendingMachine.js"></script>
+
 <div id="vending-machine">
     <div id="loader">
         <h1>Loading...</h1>
@@ -14,17 +16,18 @@
         @foreach (var item in Model.Product) {
             <div class="product" data-id="@item.Id">
                 <div class="container">
-                    <div class="product-name col-xs-12">@item.Name</div>
+                    <div id="product-@item.Id" class="product-name col-xs-12">@item.Name</div>
                     <span class="product-price col-xs-6">$@item.Price.ToString("0.00")</span>
                     <span class="product-quantity col-xs-6">Qty: @item.Quantity</span>
+                    <button onclick="selectProduct(@item.Id, @item.Price)" class="product-select-button">Select</button>
                 </div>
             </div>
         }
     </div>
     <div id="payment-ui" class="col-md-4">
         <h2 id="payment-header">PAY HERE</h2>
-        <div class="payment-button" data-value="0.25">$0.25</div>
-        <div class="payment-button" data-value="1">$1.00</div>
-        <div class="payment-button" data-value="5">$5.00</div>
+        <button disabled onclick="addQuarter()" class="payment-button" data-value="0.25">$0.25</button>
+        <button disabled onclick="addDollar()" class="payment-button" data-value="1">$1.00</button>
+        <button disabled onclick="addFiveDollars()" class="payment-button" data-value="5">$5.00</button>
     </div>
 </div>

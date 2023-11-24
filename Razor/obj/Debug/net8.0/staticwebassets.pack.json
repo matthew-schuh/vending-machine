@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "C:\\www\\vending-machine\\Razor\\wwwroot\\js\\vendingMachine.js",
+      "PackagePath": "staticwebassets\\js\\vendingMachine.js"
+    },
+    {
       "Id": "C:\\www\\vending-machine\\Razor\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
