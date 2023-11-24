@@ -16,3 +16,68 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+#vending-machine {
+  position: relative;
+  min-height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#loader {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+#products {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: red;
+}
+.product {
+  width: 250px;
+  min-height: 250px;
+  padding-bottom: 50px;
+  cursor: pointer;
+  border: 3px solid black;
+  margin: 10px;
+  text-align: center;
+}
+.product .product-name {
+  width: 90%;
+  margin: 5px auto;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.product .product-quantity {
+  font-size: 1.25em;
+}
+.product .product-price {
+  font-size: 1.25em;
+}
+
+#payment-ui {
+  background-color: blue;
+  position: relative;
+}
+h2 {
+  width: 90%;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.payment-button {
+  position: relative;
+  width: 100%;
+  padding: 5px;
+}

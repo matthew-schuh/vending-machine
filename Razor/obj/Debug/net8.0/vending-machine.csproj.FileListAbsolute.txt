@@ -553,3 +553,4 @@ C:\www\vending-machine\Razor\obj\Debug\net8.0\refint\vending-machine.dll
 C:\www\vending-machine\Razor\obj\Debug\net8.0\vending-machine.pdb
 C:\www\vending-machine\Razor\obj\Debug\net8.0\vending-machine.genruntimeconfig.cache
 C:\www\vending-machine\Razor\obj\Debug\net8.0\ref\vending-machine.dll
+C:\www\vending-machine\Razor\obj\Debug\net8.0\vending-machine.sourcelink.json
