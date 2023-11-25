@@ -2,6 +2,13 @@ const PAYMENT_URL = '/Products/Purchase';
 let currentSelection = -1;
 let totalDue;
 let currentPaymentAmount = 0;
+let $productSelection, $productCost, $currentPaymentAmount;
+
+document.addEventListener('DOMContentLoaded', () => {
+    $productSelection = $('#product-selection');
+    $productCost = $('#product-cost');
+    $currentPaymentAmount = $('#current-payment-amount');
+}, false);
 
 function addQuarter() {
     incrementPayment(0.25);
@@ -18,17 +25,20 @@ function addFiveDollars() {
 function incrementPayment(amount) {
     if (currentSelection >= 0) {
         currentPaymentAmount += amount;
+        $currentPaymentAmount.text("Paid: $" + currentPaymentAmount.toFixed(2));
         if (currentPaymentAmount >= totalDue) {
             submitPayment(currentPaymentAmount, totalDue);
         }
     }
 }
 
-function selectProduct(itemId, itemPrice) {
+function selectProduct(itemId, itemPrice, itemName) {
     currentSelection = itemId;
     totalDue = itemPrice;
     $('.product-select-button').attr('onclick', null).prop('disabled', true);
     $('.payment-button').prop('disabled', false);
+    $productSelection.text("Selection: " + itemName);
+    $productCost.text("Price: $" + itemPrice.toFixed(2));
 }
 
 function submitPayment(amountPaid, amountDue) {
@@ -40,12 +50,13 @@ function submitPayment(amountPaid, amountDue) {
         contentType: 'application/json',
         dataType: 'json',
         success: (result) => {
-            console.log('success');
-            console.log(result);
+            alert(`Your purchase was successful. Please grab your item` + (changeDue > 0 ? ` and your change in the amount of ${changeDue} (${changeDue / 0.25} Quarters)` : '') + `.`);
+            window.location.reload();
         },
         error: (error) => {
-            console.log('error');
             console.log(error);
+            alert(`I'm sorry, there was an error with your purchase. Please try again.`);
+            window.location.reload();
         }
     });
 }

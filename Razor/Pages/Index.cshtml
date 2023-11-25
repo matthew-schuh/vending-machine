@@ -2,6 +2,7 @@
 @model vending_machine.Pages_Products.IndexModel
 @{
     ViewData["Title"] = "Vending Machine";
+    var productClassName = "product";
 }
 
 <script type="text/javascript" src="~/js/vendingMachine.js"></script>
@@ -10,23 +11,33 @@
         <h1>Loading...</h1>
     </div>
 
-    <div id="products" class="col-md-8">
+    <div id="products" class="col-md-9">
         <h2 id="products-header">SELECT HERE</h2>
         @foreach (var item in Model.Product) {
-            <div class="product" data-id="@item.Id">
+            @if(item.Quantity <= 0) {
+                productClassName = "product disabled";
+            } else {
+                productClassName = "product";
+            }
+            <div class="@productClassName" data-id="@item.Id">
                 <div class="container">
                     <div id="product-@item.Id" class="product-name col-xs-12">@item.Name</div>
                     <span class="product-price col-xs-6">$@item.Price.ToString("0.00")</span>
                     <span class="product-quantity col-xs-6">Qty: @item.Quantity</span>
-                    <button onclick="selectProduct(@item.Id, @item.Price)" class="product-select-button">Select</button>
+                    @if (item.Quantity > 0) {
+                        <button onclick='selectProduct(@item.Id, @item.Price, "@item.Name")' class="product-select-button">Select</button>
+                    }
                 </div>
             </div>
         }
     </div>
-    <div id="payment-ui" class="col-md-4">
+    <div id="payment-ui" class="col-md-3">
         <h2 id="payment-header">PAY HERE</h2>
         <button disabled onclick="addQuarter()" class="payment-button" data-value="0.25">$0.25</button>
         <button disabled onclick="addDollar()" class="payment-button" data-value="1">$1.00</button>
         <button disabled onclick="addFiveDollars()" class="payment-button" data-value="5">$5.00</button>
+        <h3 class="payment-label" id="product-selection"></h3>
+        <h3 class="payment-label" id="product-cost"></h3>
+        <h3 class="payment-label" id="current-payment-amount"></h3>
     </div>
 </div>
