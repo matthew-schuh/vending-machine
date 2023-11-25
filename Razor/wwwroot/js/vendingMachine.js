@@ -1,3 +1,4 @@
+const PAYMENT_URL = '/Products/Purchase';
 let currentSelection = -1;
 let totalDue;
 let currentPaymentAmount = 0;
@@ -33,7 +34,20 @@ function selectProduct(itemId, itemPrice) {
 function submitPayment(amountPaid, amountDue) {
     $('.payment-button').attr('onclick', null).prop('disabled', true);
     const changeDue = amountPaid - amountDue;
-    console.log('submitting payment');
+    $.ajax({
+        url: PAYMENT_URL + '/' + currentSelection,
+        type: 'POST',
+        contentType: 'application/json',
+        dataType: 'json',
+        success: (result) => {
+            console.log('success');
+            console.log(result);
+        },
+        error: (error) => {
+            console.log('error');
+            console.log(error);
+        }
+    });
 }
 
 function dispenseChange() {

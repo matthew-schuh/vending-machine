@@ -26,10 +26,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\www\vending-machine\Razor
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/www/vending-machine/Razor/Pages/VendingMachine.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZGluZ01hY2hpbmUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/www/vending-machine/Razor/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/www/vending-machine/Razor/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/www/vending-machine/Razor/Pages/ProductsAPI.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNBUEkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/www/vending-machine/Razor/Pages/Products/Create.cshtml]
@@ -60,6 +60,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/www/vending-machine/Razor/Pages/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/www/vending-machine/Razor/Pages/Products/Purchase.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcUHVyY2hhc2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/www/vending-machine/Razor/Pages/Shared/_ValidationScriptsPartial.cshtml]
