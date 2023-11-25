@@ -24,13 +24,12 @@ namespace vending_machine.Pages_Products
         [BindProperty]
         public Product Product { get; set; } = default!;
 
-        public IActionResult OnGet() {
-            return new JsonResult("test");
-        }
-        
+        // List for POST requests with a single int.
         public IActionResult OnPost(int productId)
         {   
+            // Grab the product from the db.
             Product? product = _context.Product.Find(productId);
+            // If we successfully grab the product, decrement the quantity and save the new value in the db.
             if (product != null) {
                 product.Quantity -= 1;
                 if (product.Quantity < 0) {
@@ -39,6 +38,7 @@ namespace vending_machine.Pages_Products
                 _context.SaveChangesAsync();
                 return new JsonResult(product.Name);
             }
+            // TODO better error result here.
             return new JsonResult("False");
         }
 

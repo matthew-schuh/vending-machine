@@ -1,4 +1,4 @@
-#Vending Machine Application
+# Vending Machine Application
 
 Initially I had planned on writing both a "Vanilla" JS/jQuery version with a PHP endpoint and MySQL database.
 I decided instead to dive right in to the Razor Pages version and learn that starting from 0. So the Razor folder is a working version of the app and Vanilla is non-working with a few placeholder files.
