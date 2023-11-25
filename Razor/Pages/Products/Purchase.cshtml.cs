@@ -32,6 +32,11 @@ namespace vending_machine.Pages_Products
         {   
             Product? product = _context.Product.Find(productId);
             if (product != null) {
+                product.Quantity -= 1;
+                if (product.Quantity < 0) {
+                    product.Quantity = 0;
+                }
+                _context.SaveChangesAsync();
                 return new JsonResult(product.Name);
             }
             return new JsonResult("False");
