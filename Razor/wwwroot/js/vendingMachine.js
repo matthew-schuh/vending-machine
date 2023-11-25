@@ -55,7 +55,7 @@ function submitPayment(amountPaid, amountDue) {
         },
         error: (error) => {
             console.log(error);
-            alert(`I'm sorry, there was an error with your purchase. Please try again.`);
+            alert(`I'm sorry, there was an error with your purchase. Please try again. Your money has been returned.`);
             window.location.reload();
         }
     });
