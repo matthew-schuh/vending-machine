@@ -11,7 +11,7 @@
         <h1>Loading...</h1>
     </div>
 
-    <div id="products" class="col-md-9">
+    <div id="products" class="col-md-9 col-xs-12">
         <h2 id="products-header">SELECT HERE</h2>
         @foreach (var item in Model.Product) {
             @if(item.Quantity <= 0) {
@@ -31,7 +31,7 @@
             </div>
         }
     </div>
-    <div id="payment-ui" class="col-md-3">
+    <div id="payment-ui" class="col-md-3 col-xs-12">
         <h2 id="payment-header">PAY HERE</h2>
         <button disabled onclick="addQuarter()" class="payment-button" data-value="0.25">$0.25</button>
         <button disabled onclick="addDollar()" class="payment-button" data-value="1">$1.00</button>
